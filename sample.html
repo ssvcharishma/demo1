@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<title>array methods</title>
+
+<body>
+    <p id="demo"></p>
+    <script>
+        let cars = ["bmw", "volvo", "honda"];
+        document.getElementById("demo").innerHTML = cars;
+
+        let bmw = cars[0];
+        document.getElementById("demo").innerHTML = bmw;
+
+        let len = cars.length;
+        document.getElementById("demo").innerHTML = len;
+
+        let last = cars[cars.length - 1];
+        document.getElementById("demo").innerHTML = last;
+
+
+        let last1 = cars.pop();
+        document.getElementById("demo").innerHTML = last1;
+        let last2 = cars[cars.length - 1];
+        console.log(last2);
+
+        cars.push("audi");
+        document.getElementById("demo").innerHTML = cars;
+
+        cars.shift();
+        document.getElementById("demo").innerHTML = cars;
+
+        cars.unshift("hyundai");
+        document.getElementById("demo").innerHTML = cars;
+
+        let bikes = ["yamaha", "pulsar", "royalenfield"];
+        let vehicles = cars.concat(bikes);
+        document.getElementById("demo").innerHTML = vehicles;
+
+        vehicles.sort();
+        document.getElementById("demo").innerHTML = vehicles;
+
+        vehicles.reverse();
+        document.getElementById("demo").innerHTML = vehicles;
+
+        let num1 = [2, 3, 4, 5, 6, 7];
+        let num2 = num1.map(multiply);
+
+        function multiply(value) {
+            return value * 3;
+        }
+        document.getElementById("demo").innerHTML = num2;
+
+        let num3 = num1.filter(comp);
+
+        function comp(value) {
+            return value > 4;
+        }
+        document.getElementById("demo").innerHTML = num3;
+
+        let num4 = num1.reduce(sum);
+
+        function sum(total, value) {
+            return total + value;
+        }
+        document.getElementById("demo").innerHTML = num4;
+    </script>
+</body>
+
+</html>
