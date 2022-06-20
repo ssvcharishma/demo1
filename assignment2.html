@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>test2</title>
+</head>
+
+<body>
+    <p id="hi">reverse of a string</p>
+    <script>
+        let fruits = ["apple", "kiwi", "grapes", "orange"];
+        fruits.reverse();
+        document.getElementById("hi").innerHTML = fruits;
+    </script>
+    <p id="hj"></p>
+    <p id="tr"></p>
+    <script>
+        const radius = [5, 9, 2];
+        document.getElementById("hj").innerHTML = radius;
+        radius.sort(function(a, b) {
+            return a - b;
+        });
+        document.getElementById("tr").innerHTML = radius;
+    </script>
+    <p id="re"></p>
+    <script>
+        let colours = ["pink", "blue", "black", "white"];
+        let len = colours.length;
+        document.getElementById("re").innerHTML = len;
+    </script>
+</body>
+
+</html>
