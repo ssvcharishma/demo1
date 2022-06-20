@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+</head>
+
+<body>
+    <p>prob-1</p>
+    <script>
+        let a = 16;
+        let temp = is_integer(a);
+        document.write(temp);
+
+        function is_integer(n) {
+            return typeof(n) == "integer" &&
+                Math.floor(n) == n;
+        }
+    </script>
+    <p id="hw">problem2</p>
+    <script>
+        let num1 = [2, 4, 6];
+        let num4 = num1.reduce(sum);
+
+        function sum(total, value) {
+            return total + value;
+        }
+        document.getElementById("hw").innerHTML = num4;
+    </script>
+    <p>
+        <label>fahrenheit</label>
+        <input id="input farenheit" type="number" placeholder="fahrenheit" oninput="temperatureconverter(this.value)" onchange="temperatureconverter(this.value)"></p>
+    <p>celcius : <span id="output celcius"></span></p>
+    <script>
+        function temperatureconverter(valnum) {
+            document.getElementById("output celcius").innerHTML = (valnum - 32) / 1.8;
+        }
+    </script>
+    <p>prob-4</p>
+    <script>
+        let num = 5;
+        let temp1 = factorial(num);
+        document.write(temp1)
+
+        function factorial(n) {
+            fact = 1;
+
+            for (var i = 1; i <= n; i++) {
+                fact = fact * i;
+
+            }
+            return fact;
+
+        }
+    </script>
+
+</body>
+
+</html>
