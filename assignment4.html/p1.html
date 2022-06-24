@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <script>
+        function Rectangle(l, b) {
+            this.length = l;
+            this.breadth = b;
+            this.area = function() {
+                return this.length * this.breadth;
+            }
+            this.perimeter = function() {
+                return 2 * (this.length + this.breadth);
+            }
+        }
+        var o = new Rectangle(5, 3);
+        console.log("Area of rectangle is = " + o.area());
+        console.log("Perimeter of rectangle is = " + o.perimeter());
+    </script>
+</body>
+
+</html>

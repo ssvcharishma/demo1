@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <script>
+        function distance(x, y) {
+            this.x = x;
+            this.y = y;
+            this.d = function(another) {
+                return Math.sqrt(((x - another.x) * 2) + ((y - another.y) * 2));
+            }
+        }
+        var p1 = new distance(12, 10);
+        var p2 = new distance(6, 5);
+        console.log(p1.d(p2));
+    </script>
+</body>
+
+</html>

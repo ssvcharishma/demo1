@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <script>
+        function isPalindrome(str) {
+            this.str = str;
+            this.str_rev = str.split("").reverse().join("");
+            this.isPalindrome = function() {
+                if (this.str === this.str_rev) {
+                    return "Yes";
+                } else {
+                    return "No";
+                }
+            }
+        }
+        var string = new isPalindrome("madam");
+        console.log(string.isPalindrome());
+    </script>
+</body>
+
+</html>
