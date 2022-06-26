@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>problem-3</title>
+    <meta char="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .size {
+            width: 250px;
+            height: 250px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <h1>animations in javascript</h1>
+    <img src="https://www.freepnglogos.com/uploads/html5-logo-png/html5-logo-devextreme-multi-purpose-controls-html-javascript-3.png" id="img" alt="Javascipt" class="size" onmouseover="fadein()" onmouseout="fadeout()">
+    <!--<input type="button" value="Fade-in" on-click="fadein()">
+    <input type="button" value="Fade-out" on-click="fadeout()">-->
+    <script>
+        function fadein() {
+            document.getElementById("img").style.opacity = 0.5;
+
+        }
+
+        function fadeout() {
+            document.getElementById("img").style.opacity = 1;
+        }
+    </script>
+</body>
+
+
+</html>
