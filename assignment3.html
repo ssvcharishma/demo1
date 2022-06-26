@@ -1,0 +1,52 @@
+html>
+
+<head>
+    <title>
+        javascript assignment-3
+    </title>
+</head>
+
+<body>
+    <script>
+        var a = ['a', 'abc', 'aa'];
+        var temp = max_str(a);
+        document.write(temp);
+
+        function max_str(arr) {
+            return arr.reduce(function(prev, curr) {
+                if (curr.length > prev.length) {
+                    return curr;
+
+                } else {
+                    return prev;
+                }
+            }, " ");
+        }
+        var b = [2, 3, 4, 5];
+        var t = sum_of_squares(b);
+        var te = filter_even(b);
+        document.writeln(t + "  " + te);
+
+        function sum_of_squares(arr) {
+            return arr.map(function(elem) {
+                return elem * elem
+            }).reduce(function(prev, curr) {
+                return prev + curr
+            }, 0);
+        }
+
+        function filter_even(arr) {
+            return arr.filter(function(elem) {
+                return elem % 2 == 0
+            });
+        }
+        let mynum = [1, 2, 3, 4, 5, 6];
+        console.log(mynum.filter(function(num) {
+            return !(num % 2);
+
+        }));
+        console.log(mynum);
+    </script>
+</body>
+
+</html>
