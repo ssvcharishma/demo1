@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initialscale=1.0">
+    <title>slide</title>
+    <script>
+        pics = ['image1.jfif', 'image2.jpg', 'image3.jfif', 'image4.jfif'];
+
+        function load() {
+            document.getElementById("pictures").getElementsByTagName("img")[0].src = pics[0];
+            changepic(0);
+        }
+
+        function changepic(n) {
+            document.getElementById("pictures").getElementsByTagName("img")[0].src = pics[n % pics.length]
+            setInterval(function() {
+                changepic(n + 1);
+            }, 3000);
+        }
+    </script>
+    <style>
+        body {
+            background-color: black;
+        }
+    </style>
+</head>
+
+<body onload="load()">
+    <p>hihvdnjdkhvd</p>
+    <center>
+        <div id="pictures" style="width:800px;height:500px;margin:0;">
+            <img style="height:100%;width:100%" />
+        </div>
+
+    </center>
+
+</body>
+
+</html>
